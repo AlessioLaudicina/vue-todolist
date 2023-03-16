@@ -24,7 +24,7 @@
         <div class="new-task" style="text-align: center;">
           <input type="text" placeholder="Inserisci  un giocatore da comprare" v-model="newTask" @keyup.enter="addTask" @keyup="checkLength"/>
           <button @click="addTask">Aggiungi</button>
-          <div v-show="error" class="error">Errore, la lunghezza del testo non supera i 5 caratteri</div>
+          <div v-show="error" class="error">La lunghezza del testo deve superare i 5 caratteri</div>
         </div>
 
 

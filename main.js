@@ -42,6 +42,7 @@ const { createApp } = Vue
           text: this.newTask,
         };
         this.tasklist.push(newTaskAdd)
+        
       },
 
       checkLength(){
