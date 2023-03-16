@@ -22,17 +22,20 @@
 
 
         <div class="new-task" style="text-align: center;">
-          <input type="text" placeholder="Inserisci  un giocatore da comprare" v-model="newTask" @keyup.enter="addTask"/>
+          <input type="text" placeholder="Inserisci  un giocatore da comprare" v-model="newTask" @keyup.enter="addTask" @keyup="checkLength"/>
           <button @click="addTask">Aggiungi</button>
+          <div v-show="error" class="error">Errore, la lunghezza del testo non supera i 5 caratteri</div>
         </div>
 
 
         <div class="task-list">
 
           
-          <ul>
+          <ul v-if="tasklist.length > 0">
             <li v-for="(task, index) in tasklist"><span class="task-text">{{task.text}}</span> <i class="fa-solid fa-xmark" @click="removeTask(index)"></i></li> 
           </ul>
+
+          <h3 v-else>Non ci sono occasioni di mercato</h3>
 
           
         </div>

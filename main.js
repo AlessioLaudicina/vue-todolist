@@ -5,23 +5,24 @@ const { createApp } = Vue
       return {
 
         newTask: '',
+        error: false,
 
         tasklist: [
           {
-            text: 'Task 1', 
+            text: 'Messi', 
             done: false,
           },
 
           {
-            text: 'Task 2', 
+            text: 'Mbappe', 
             done: false,
           },
           {
-            text: 'Task 3', 
+            text: 'Haaland', 
             done: false,
           },
           {
-            text: 'Task 4', 
+            text: 'Cristiano Ronaldo', 
             done: false,
           }
         ]
@@ -37,13 +38,18 @@ const { createApp } = Vue
       },
 
       addTask(){
-      
-
-  
         const newTaskAdd = {
           text: this.newTask,
         };
         this.tasklist.push(newTaskAdd)
+      },
+
+      checkLength(){
+        if(this.newTask.length >= 5){
+          this.error = false;
+        } else {
+          this.error = true
+        }
       }
 
     }
