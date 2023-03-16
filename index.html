@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>To do List</title>
+  </head>
+  <body>
+    <div id="app">
+
+      <header class="container text-center">
+       
+            <img class="logo" src="./img/immagineVue.png">
+          
+      
+      </header>
+
+      
+      
+      <main class="container">
+
+
+        <div class="new-task" style="text-align: center;">
+          <input type="text" placeholder="Inserisci  un giocatore da comprare" v-model="newTask" @keyup.enter="addTask"/>
+          <button @click="addTask">Aggiungi</button>
+        </div>
+
+
+        <div class="task-list">
+
+          
+          <ul>
+            <li v-for="task in tasklist"><span class="task-text">{{task}}</span> <i class="fa-solid fa-xmark" @click="removeTask(index)"></i></li> 
+          </ul>
+
+          
+        </div>
+
+      </main>
+
+      
+        
+
+
+    </div>
+
+
+
+
+
+    
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>

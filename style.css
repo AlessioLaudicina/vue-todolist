@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.logo{
+    height: 70px;
+}
+
+.new-task {
+    margin-top: 40px;
+}
+
+.new-task input{
+    padding: 10px;
+    margin-right: 20px;
+    min-width: 300px;
+}
+
+.task-list ul{
+    list-style: none;
+}
+
+.task-list li{
+    border-bottom: 1px solid blue;
+    padding: 10px 5px;
+    display: flex;
+}
+
+.task-text{
+    flex-grow: 1;
+}
+
