@@ -6,7 +6,25 @@ const { createApp } = Vue
 
         newTask: '',
 
-        tasklist: ['Task 1', 'Task 2', 'Task 3']
+        tasklist: [
+          {
+            text: 'Task 1', 
+            done: false,
+          },
+
+          {
+            text: 'Task 2', 
+            done: false,
+          },
+          {
+            text: 'Task 3', 
+            done: false,
+          },
+          {
+            text: 'Task 4', 
+            done: false,
+          }
+        ]
 
         
         
@@ -19,8 +37,13 @@ const { createApp } = Vue
       },
 
       addTask(){
-        this.tasklist.push(this.newTask);
-        this.newTask = ""
+      
+
+  
+        const newTaskAdd = {
+          text: this.newTask,
+        };
+        this.tasklist.push(newTaskAdd)
       }
 
     }
