@@ -32,7 +32,7 @@
 
           
           <ul v-if="tasklist.length > 0">
-            <li v-for="(task, index) in tasklist"><span class="task-text">{{task.text}}</span> <i class="fa-solid fa-xmark" @click="removeTask(index)"></i></li> 
+            <li v-for="(task, index) in tasklist"><span class="task-text" :class="{'done': task.done }" @click="invertDone(task)">{{task.text}}</span> <i class="fa-solid fa-xmark" @click="removeTask(index)"></i></li> 
           </ul>
 
           <h3 v-else>Non ci sono occasioni di mercato</h3>

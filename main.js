@@ -40,8 +40,10 @@ const { createApp } = Vue
       addTask(){
         const newTaskAdd = {
           text: this.newTask,
+          done: false
         };
         this.tasklist.push(newTaskAdd)
+        this.newTask = ""
         
       },
 
@@ -51,6 +53,11 @@ const { createApp } = Vue
         } else {
           this.error = true
         }
+      },
+
+      invertDone(task){
+      task.done = !task.done;
+
       }
 
     }
